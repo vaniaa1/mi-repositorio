@@ -1,0 +1,74 @@
+#Funcion Olivanders
+def registro("1,2,3,4"):
+if("1,2,3,4") == "1"
+print("Has seleccionado la varita de Saúco")
+if("1,2,3,4") == "2"
+print("Has seleccionado la varita de Espino")
+if("1,2,3,4") == "3"
+print("Has seleccionado la varita de Sauce")
+if("1,2,3,4") == "4"
+print("Has seleccionado la varita de Acebo")
+
+#clientes y varitas compradas
+print("\nRegistro de clientes y varitas compradas:")
+for cliente, varita in clientes.items():
+    print(f"{cliente} compró la varita número {varita}")
+
+#Quién compró que tipo de varita
+print("\nClientes que compraron cada tipo de varita:")
+for varita, lista_clientes in compraron_varita.items():
+    if varita == '1':
+        nombre_varita = "Varita de Saúco"
+    elif varita == '2':
+        nombre_varita = "Varita de Espino"
+    elif varita == '3':
+        nombre_varita = "Varita de Sauce"
+    elif varita == '4':
+        nombre_varita = "Varita de Acebo"
+    else:
+        nombre_varita = "Varita Desconocida"
+
+    print("Clientes que compraron la", [nombre_varita]
+
+
+#Funcion asistente virtual
+def contar_Alexa(texto):
+  palabras = texto.split()
+  veces_alexa = palabras.count("Alexa")
+  return veces_alexa
+
+texto = input("Escribe un texto: ")
+ocurrencias = contar_Alexa(texto)
+
+if ocurrencias == 1:
+  print("¡Hola, soy Alexa!")
+elif ocurrencias > 1:
+  print("Tranquilo, solo di mi nombre una vez")
+else:
+  print("No mencionaste mi nombre")
+
+
+
+#Funcion para calcular porcentaje
+lecturas_totales = 0
+lecturas_erroneas = 0
+
+while True:
+    lectura = input("Ingresa la lectura del sensor (o escribe 'fin' para terminar)")
+
+    if lectura.lower() == 'fin':
+        break
+
+    lectura = float(lectura)
+
+    # Verificar si la lectura está fuera del rango esperado
+    if lectura < 10 or lectura > 40:
+        lecturas_erroneas += 1
+
+    lecturas_totales += 1
+
+if lecturas_totales > 0:
+    porcentaje_error = (lecturas_erroneas / lecturas_totales) * 100
+    print(f"El porcentaje de lecturas incorrectas es: {porcentaje_error:.2f}%)
+else:
+    print("No se ingresaron lecturas.")
